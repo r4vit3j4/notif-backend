@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const http = require("http").Server(app);
-const PORT = 3000;
+const PORT = process.env.port || 3000;
 const socketIO = require("socket.io")(http, {
   cors: {
     origin: "*",
